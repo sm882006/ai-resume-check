@@ -1,0 +1,50 @@
+.cta-box {
+  background: linear-gradient(135deg, rgba(99,102,241,0.2), rgba(168,85,247,0.2));
+  border: 1px solid rgba(99,102,241,0.3);
+  padding: 80px 40px;
+  border-radius: 30px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-box::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(99,102,241,0.3), transparent 50%);
+  animation: pulse 4s ease infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+.cta-box h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-box p {
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  margin-bottom: 35px;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-box button {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .cta-box h2 { font-size: 2rem; }
+}

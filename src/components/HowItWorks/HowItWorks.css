@@ -1,0 +1,41 @@
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  position: relative;
+}
+
+.step-card {
+  background: rgba(19,19,26,0.5);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.step-card:hover { transform: translateY(-5px); }
+
+.step-num {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 15px;
+}
+
+.step-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.step-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
